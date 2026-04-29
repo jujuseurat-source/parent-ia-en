@@ -1,0 +1,46 @@
+# Parent IA — llms.txt
+# https://www.parent-ia.fr
+
+## Présentation
+
+Parent IA est un blog tenu par Julien Seurat, un père de famille français qui documente ses expériences pour initier ses deux enfants (Romane, 7 ans, et Meryl, 4 ans) à l'intelligence artificielle de façon ludique, concrète, et sans écran.
+
+Chaque article décrit une activité réelle testée en famille, les réactions des enfants (ratés inclus), et un concept d'IA expliqué simplement.
+
+## Thèmes couverts
+
+- Classification et catégorisation
+- Mémoire et apprentissage automatique
+- Reconnaissance de patterns
+- Langage naturel et compréhension
+- Logique et prise de décision
+- Créativité et génération
+
+## Structure du contenu
+
+Chaque article suit cette structure :
+1. Accroche in medias res (scène concrète)
+2. Concept IA expliqué simplement
+3. L'activité pas à pas (matériel, durée, déroulé)
+4. Ce qui s'est vraiment passé (réactions des enfants)
+5. Question ou observation finale ouverte
+
+## Audience
+
+Parents, éducateurs, et toute personne souhaitant expliquer l'IA à des enfants de 4 à 10 ans sans utiliser d'écran ni de jargon technique.
+
+## Liens utiles
+
+- Accueil : https://www.parent-ia.fr
+- Blog : https://www.parent-ia.fr/blog
+- À propos : https://www.parent-ia.fr/a-propos
+- Sitemap : https://www.parent-ia.fr/sitemap.xml
+
+## Auteur
+
+Julien Seurat — père de famille, passionné de numérique
+Contact : jujuseurat@gmail.com
+
+## Licence
+
+Contenu sous licence CC BY-NC-SA 4.0 — libre de citer avec attribution, non commercial.

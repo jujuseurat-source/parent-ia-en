@@ -4,7 +4,16 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Toutes les activités testées pour apprendre l\'IA à mes enfants.',
+  description: 'Toutes les activités testées en famille pour apprendre l\'intelligence artificielle à mes enfants — classification, mémoire, patterns, langage.',
+  alternates: {
+    canonical: 'https://www.parent-ia.fr/blog',
+  },
+  openGraph: {
+    title: 'Blog — Parent IA',
+    description: 'Toutes les activités testées en famille pour apprendre l\'IA aux enfants de façon ludique et sans écran.',
+    url: 'https://www.parent-ia.fr/blog',
+    type: 'website',
+  },
 }
 
 export default function BlogPage() {

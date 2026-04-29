@@ -11,15 +11,48 @@ const geistSans = localFont({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.parent-ia.fr'),
   title: {
     default: 'Parent IA — Grandir avec l\'IA',
     template: '%s | Parent IA',
   },
   description:
-    'Un père documente ses expériences pour apprendre l\'intelligence artificielle à ses enfants de 6 et 9 ans — de manière ludique, concrète, et sans écran.',
+    'Un père documente ses expériences pour apprendre l\'intelligence artificielle à ses enfants de façon ludique, concrète, et sans écran. Des activités testées en famille.',
+  keywords: [
+    'IA enfants', 'intelligence artificielle enfants', 'apprendre IA', 'activités IA famille',
+    'éducation IA', 'parent numérique', 'initiation intelligence artificielle', 'activités sans écran',
+    'IA ludique', 'apprendre avec les enfants',
+  ],
+  authors: [{ name: 'Julien Seurat', url: 'https://www.parent-ia.fr/a-propos' }],
+  creator: 'Julien Seurat',
+  publisher: 'Parent IA',
   openGraph: {
+    type: 'website',
     siteName: 'Parent IA',
     locale: 'fr_FR',
+    url: 'https://www.parent-ia.fr',
+    title: 'Parent IA — Grandir avec l\'IA',
+    description: 'Un père documente ses expériences pour apprendre l\'IA à ses enfants de façon ludique, concrète, et sans écran.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Parent IA — Grandir avec l\'IA',
+    description: 'Un père documente ses expériences pour apprendre l\'IA à ses enfants de façon ludique, concrète, et sans écran.',
+    creator: '@jujuseurat',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://www.parent-ia.fr',
   },
 }
 

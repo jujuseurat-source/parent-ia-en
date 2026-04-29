@@ -16,9 +16,32 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticleBySlug(params.slug)
   if (!article) return {}
+  const { frontmatter, slug } = article
+  const url = `https://www.parent-ia.fr/blog/${slug}`
   return {
-    title: article.frontmatter.titre,
-    description: article.frontmatter.resume,
+    title: frontmatter.titre,
+    description: frontmatter.resume,
+    keywords: frontmatter.tags,
+    authors: [{ name: 'Julien Seurat', url: 'https://www.parent-ia.fr/a-propos' }],
+    openGraph: {
+      type: 'article',
+      url,
+      title: frontmatter.titre,
+      description: frontmatter.resume,
+      publishedTime: frontmatter.date,
+      authors: ['Julien Seurat'],
+      tags: frontmatter.tags,
+      siteName: 'Parent IA',
+      locale: 'fr_FR',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: frontmatter.titre,
+      description: frontmatter.resume,
+    },
+    alternates: {
+      canonical: url,
+    },
   }
 }
 
@@ -26,10 +49,35 @@ export default function ArticlePage({ params }: Props) {
   const article = getArticleBySlug(params.slug)
   if (!article) notFound()
 
-  const { frontmatter, content } = article
+  const { frontmatter, content, slug } = article
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: frontmatter.titre,
+    description: frontmatter.resume,
+    datePublished: frontmatter.date,
+    author: {
+      '@type': 'Person',
+      name: 'Julien Seurat',
+      url: 'https://www.parent-ia.fr/a-propos',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Parent IA',
+      url: 'https://www.parent-ia.fr',
+    },
+    url: `https://www.parent-ia.fr/blog/${slug}`,
+    keywords: frontmatter.tags.join(', '),
+    inLanguage: 'fr-FR',
+  }
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Retour */}
       <Link href="/blog" className="inline-flex items-center gap-1 text-brun-light hover:text-terracotta text-sm mb-8 transition-colors">
         ← Retour au blog
