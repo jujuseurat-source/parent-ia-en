@@ -54,6 +54,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.parent-ia.fr',
   },
+  verification: {
+    google: 'XoeRZQvfM7EGDEH8H5k10Vk2a2K8LAgLbVhHtmLmIEs',
+  },
 }
 
 export default function RootLayout({
