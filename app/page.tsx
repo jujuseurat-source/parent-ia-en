@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getAllArticles } from '@/lib/articles'
 import ArticleCard from '@/components/ArticleCard'
+import Newsletter from '@/components/Newsletter'
 
 export default function HomePage() {
   const articles = getAllArticles().slice(0, 3)
@@ -85,6 +86,11 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      {/* Newsletter */}
+      <section className="max-w-xl mx-auto px-4 pb-16">
+        <Newsletter />
+      </section>
     </div>
   )
 }
