@@ -7,7 +7,7 @@
 
 ## 🎯 Le projet en 30 secondes
 
-**Parent IA** est un blog Next.js où Julien documente ses expériences pour apprendre l'IA à ses enfants (Romane 7 ans, Meryl 4 ans) de façon ludique et sans écran.
+**Parent IA** est un blog Next.js où Julien documente ses expériences pour apprendre l'IA à ses enfants (Romane 6 ans en fin de CP, Meryl 3 ans en Petite Section) de façon ludique et sans écran.
 
 **Tagline :** "Grandir avec l'IA"  
 **Stack :** Next.js 14 + Tailwind + TypeScript + MDX  
@@ -55,6 +55,61 @@
 
 ---
 
+## 🧒 Les enfants — âges exacts et stades de développement
+
+**RÈGLE ABSOLUE : avant d'écrire ou de relire un article, calculer l'âge exact des enfants à la date de l'article.**
+
+### Dates de naissance
+| Enfant | Date de naissance | Âge au 1er mai 2026 | Classe 2025-2026 |
+|--------|-------------------|----------------------|------------------|
+| **Romane** | 30 novembre 2019 | 6 ans 5 mois | CP (fin d'année) |
+| **Meryl** | 10 juillet 2022 | 3 ans 9 mois | Petite Section (PS) de maternelle |
+
+### Comment calculer l'âge à la date d'un article
+- Article daté du **2026-01-20** → Romane : 6 ans 1 mois / Meryl : 3 ans 6 mois
+- Article daté du **2026-09-01** → Romane : 6 ans 9 mois (CE1) / Meryl : 4 ans 1 mois (MS)
+- Formule : `âge = date_article - date_naissance` (arrondi en années et mois)
+
+### Ce que Romane peut faire (CP, 6-7 ans)
+✅ Lire des mots simples, des phrases courtes (apprentissage en cours, pas encore fluide)  
+✅ Écrire en script, quelques mots sans modèle, phrases courtes avec aide  
+✅ Compter, additionner de petits nombres  
+✅ Comprendre des concepts abstraits si bien illustrés (règles, catégories, probabilités simples)  
+✅ Avoir des raisonnements logiques, formuler des hypothèses ("je pense que...", "peut-être que...")  
+✅ Participer activement à des jeux de rôle, des activités avec des règles  
+⚠️ Lecture fluide : non — elle déchiffre lentement, syllabe par syllabe  
+⚠️ Écriture autonome longue : non — fatigue vite, orthographe très approximative  
+
+### Ce que Meryl peut faire (PS maternelle, 3-4 ans)
+✅ Parler en phrases, comprendre des consignes simples  
+✅ Trier des objets par couleur, taille, forme (critère unique et visuel)  
+✅ Dessiner (bonhomme têtard, gribouillages reconnaissables)  
+✅ Reproduire des gestes simples, imiter  
+✅ Reconnaître des images, associer par ressemblance visuelle  
+✅ Avoir des réactions spontanées, des phrases qui font rire  
+✅ Distinguer visuellement qu'un mot est "plus long" qu'un autre (sans savoir lire)  
+❌ **Lire** — impossible, pas encore entré dans la lecture  
+❌ **Écrire** — peut tracer son prénom avec aide, c'est tout  
+❌ **Comprendre des concepts abstraits** (biais, probabilité, mémoire informatique...)  
+❌ **Suivre les règles d'un jeu complexe** — peut participer de façon périphérique, pas centrale  
+❌ **Stratégie intentionnelle** — ses actions sont instinctives, pas planifiées  
+
+### Erreurs à éviter absolument dans les articles
+❌ Meryl lit un mot, une phrase, une étiquette  
+❌ Meryl écrit quelque chose (sauf son prénom avec aide, mentionné explicitement)  
+❌ Meryl comprend et applique une règle de jeu complexe  
+❌ Meryl fait preuve de stratégie intentionnelle ("il a décidé de...", "il avait compris que...")  
+❌ Romane lit couramment et rapidement (elle déchiffre, c'est lent et laborieux)  
+❌ Les deux participent de la même façon à une activité — Meryl a toujours un rôle plus périphérique, ludique, imprévisible  
+
+### Allergie de Meryl
+❌ **Meryl est allergique au lait de vache** — ne jamais proposer d'activité ou d'exemple qui implique du lait, du fromage, de la crème, de la glace, du beurre ou tout produit laitier pour elle.
+
+### Ton juste pour Meryl dans un article
+Meryl perturbe, détourne, renverse, dit des trucs qui n'ont aucun rapport, s'endort, veut le crayon de Romane, met tout dans sa bouche. Ses interventions sont drôles et chaotiques — jamais analytiques. C'est ça la vérité d'un enfant de 3-4 ans.
+
+---
+
 ## 📝 Règles d'écriture sacrées
 
 ### Le TON (Julien)
@@ -76,7 +131,8 @@
 ❌ Conclusions qui résument  
 ❌ Introductions qui annoncent  
 ❌ Formules IA-cringe : "Dans un monde qui...", "révolutionnaire", "game-changer"  
-❌ Tirets cadratins (—), listes à bullets compulsives, emphase excessive  
+❌ Tirets cadratins (—) : remplacer par une virgule, des parenthèses ou deux-points selon le sens  
+❌ Listes à bullets compulsives, emphase excessive  
 ❌ Vocabulaire corporate : optimiser, déployer, framework, levier  
 ❌ Passif objectivant : "Il a été démontré"  
 ❌ Fausse intimité : "Vous vous demandez peut-être..."
@@ -173,7 +229,7 @@ npm start
 **Articles écrits :** 1 (le-tri-magique)  
 **Articles en brouillon :** 0  
 **Concepts explorés :** Classification/catégorisation  
-**Enfants testés :** Romane et Meryl (vraies reactions)  
+**Enfants testés :** Romane (6 ans, CP) et Meryl (3 ans, PS maternelle)  
 
 **Prochains articles suggérés :**
 - Mémoire / apprentissage
