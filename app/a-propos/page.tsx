@@ -3,13 +3,13 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'À propos',
-  description: 'Je m\'appelle Julien. Romane a 7 ans, Meryl en a 4. Ce blog raconte comment j\'essaie de leur expliquer l\'IA avec du papier, des jeux, et beaucoup de ratés.',
+  description: 'Je m\'appelle Julien. Romane a 6 ans, Meryl en a 3. Ce blog raconte comment j\'essaie de leur expliquer l\'IA avec du papier, des jeux, et beaucoup de ratés.',
   alternates: {
     canonical: 'https://www.parent-ia.fr/a-propos',
   },
   openGraph: {
-    title: 'À propos — Parent IA',
-    description: 'Je m\'appelle Julien. Romane a 7 ans, Meryl en a 4. Ce blog raconte comment j\'essaie de leur expliquer l\'IA avec du papier, des jeux, et beaucoup de ratés.',
+    title: 'À propos | Parent IA',
+    description: 'Je m\'appelle Julien. Romane a 6 ans, Meryl en a 3. Ce blog raconte comment j\'essaie de leur expliquer l\'IA avec du papier, des jeux, et beaucoup de ratés.',
     url: 'https://www.parent-ia.fr/a-propos',
     type: 'website',
   },

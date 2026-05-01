@@ -19,8 +19,8 @@ export default function HomePage() {
             Parent IA
           </p>
           <p className="text-brun-light text-base leading-relaxed mb-8 max-w-xl mx-auto">
-            Un père qui apprend l&apos;intelligence artificielle à ses enfants de 6 et 9 ans —
-            des activités concrètes, ludiques, et sans écran.
+            Un père qui apprend l&apos;intelligence artificielle à ses enfants de 6 et 3 ans,
+            des activités concrètes, ludiques et sans écran.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link

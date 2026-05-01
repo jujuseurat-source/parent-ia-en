@@ -13,7 +13,7 @@ const geistSans = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.parent-ia.fr'),
   title: {
-    default: 'Parent IA — Grandir avec l\'IA',
+    default: 'Parent IA | Grandir avec l\'IA',
     template: '%s | Parent IA',
   },
   description:
@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     siteName: 'Parent IA',
     locale: 'fr_FR',
     url: 'https://www.parent-ia.fr',
-    title: 'Parent IA — Grandir avec l\'IA',
+    title: 'Parent IA | Grandir avec l\'IA',
     description: 'Un père documente ses expériences pour apprendre l\'IA à ses enfants de façon ludique, concrète, et sans écran.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Parent IA — Grandir avec l\'IA',
+    title: 'Parent IA | Grandir avec l\'IA',
     description: 'Un père documente ses expériences pour apprendre l\'IA à ses enfants de façon ludique, concrète, et sans écran.',
     creator: '@jujuseurat',
   },
