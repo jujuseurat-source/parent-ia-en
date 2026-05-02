@@ -42,11 +42,4 @@ export function getArticleBySlug(slug: string): Article | null {
   }
 }
 
-export function formatDate(dateStr: string): string {
-  const date = new Date(dateStr)
-  return date.toLocaleDateString('fr-FR', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  })
-}
+export { formatDate } from '@/lib/utils'

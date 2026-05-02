@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ArticleFrontmatter } from '@/types/article'
-import { formatDate } from '@/lib/articles'
+import { formatDate } from '@/lib/utils'
 
 interface ArticleCardProps {
   slug: string
