@@ -1,5 +1,5 @@
 import { getAllArticles } from '@/lib/articles'
-import ArticleCard from '@/components/ArticleCard'
+import BlogClient from '@/components/BlogClient'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -36,15 +36,7 @@ export default function BlogPage() {
           <p className="text-brun-light mt-2">Revenez vite, les aventures commencent.</p>
         </div>
       ) : (
-        <div className="flex flex-col gap-4">
-          {articles.map(article => (
-            <ArticleCard
-              key={article.slug}
-              slug={article.slug}
-              frontmatter={article.frontmatter}
-            />
-          ))}
-        </div>
+        <BlogClient articles={articles} />
       )}
     </div>
   )
