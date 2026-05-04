@@ -1,5 +1,4 @@
 import { getAllArticles } from '@/lib/articles'
-import { formatDate } from '@/lib/utils'
 
 const SITE_URL = 'https://www.parent-ia.fr'
 
