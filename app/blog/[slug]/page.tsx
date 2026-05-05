@@ -3,6 +3,10 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import AudioPlayer from '@/components/AudioPlayer'
+import Image from 'next/image'
+
+const mdxComponents = { AudioPlayer, Image }
 
 interface Props {
   params: { slug: string }
@@ -135,7 +139,7 @@ export default function ArticlePage({ params }: Props) {
         prose-blockquote:border-l-4 prose-blockquote:border-sauge prose-blockquote:bg-sauge-100 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:not-italic
         prose-blockquote:text-brun-light
       ">
-        <MDXRemote source={content} />
+        <MDXRemote source={content} components={mdxComponents} />
       </article>
 
       {/* Retour enfants */}

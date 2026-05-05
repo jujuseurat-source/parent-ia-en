@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export const metadata: Metadata = {
   title: 'À propos',
@@ -15,7 +16,31 @@ export const metadata: Metadata = {
   },
 }
 
+// Pour activer un vocal : décommenter la ligne et déposer le fichier dans public/audio/a-propos/
+const AUDIO = {
+  julien: {
+    src: '/audio/a-propos/julien-pourquoi-ce-blog.mp3',
+    label: 'Julien, le papa',
+    description: 'Pourquoi j\'ai créé ce blog',
+    enabled: false, // passer à true quand le fichier est déposé
+  },
+  romane: {
+    src: '/audio/a-propos/romane-cia-pour-toi.mp3',
+    label: 'Romane, 6 ans',
+    description: "C'est quoi l'IA pour toi ?",
+    enabled: false,
+  },
+  meryl: {
+    src: '/audio/a-propos/meryl-cia-pour-toi.mp3',
+    label: 'Meryl, 3 ans',
+    description: "C'est quoi l'IA pour toi ?",
+    enabled: false,
+  },
+}
+
 export default function AProposPage() {
+  const anyAudioEnabled = Object.values(AUDIO).some(a => a.enabled)
+
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-brun mb-8">À propos</h1>
@@ -67,6 +92,39 @@ export default function AProposPage() {
           Les activités se font chez vous, avec ce que vous avez sous la main.
         </p>
       </div>
+
+      {/* Section vocaux — apparaît automatiquement dès qu'un fichier est activé */}
+      {anyAudioEnabled && (
+        <div className="mt-10">
+          <h2 className="text-xl font-bold text-brun mb-2">En voix</h2>
+          <p className="text-brun-light text-sm mb-5">
+            Parce que certaines choses se ressentent mieux qu&apos;elles ne s&apos;expliquent.
+          </p>
+          <div className="space-y-3">
+            {AUDIO.julien.enabled && (
+              <AudioPlayer
+                src={AUDIO.julien.src}
+                label={AUDIO.julien.label}
+                description={AUDIO.julien.description}
+              />
+            )}
+            {AUDIO.romane.enabled && (
+              <AudioPlayer
+                src={AUDIO.romane.src}
+                label={AUDIO.romane.label}
+                description={AUDIO.romane.description}
+              />
+            )}
+            {AUDIO.meryl.enabled && (
+              <AudioPlayer
+                src={AUDIO.meryl.src}
+                label={AUDIO.meryl.label}
+                description={AUDIO.meryl.description}
+              />
+            )}
+          </div>
+        </div>
+      )}
 
       <div className="mt-10 flex flex-col sm:flex-row gap-3">
         <Link
