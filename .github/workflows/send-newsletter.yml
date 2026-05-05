@@ -1,0 +1,43 @@
+name: Envoyer la newsletter
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/articles/**'
+
+jobs:
+  send-newsletter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du repo
+        uses: actions/checkout@v4
+
+      - name: Attendre le déploiement Vercel (~2 min)
+        run: sleep 120
+
+      - name: Extraire le slug du dernier article
+        id: slug
+        run: |
+          LATEST=$(ls -t content/articles/*.mdx | head -1)
+          SLUG=$(basename "$LATEST" .mdx)
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "Article détecté : $SLUG"
+
+      - name: Envoyer la newsletter via l'API
+        run: |
+          RESPONSE=$(curl -s -o /tmp/response.json -w "%{http_code}" \
+            -X POST https://www.parent-ia.fr/api/send-newsletter \
+            -H "Content-Type: application/json" \
+            -d "{\"secret\":\"${{ secrets.NEWSLETTER_SECRET }}\",\"slug\":\"${{ steps.slug.outputs.slug }}\"}")
+
+          echo "HTTP Status : $RESPONSE"
+          cat /tmp/response.json
+
+          if [ "$RESPONSE" != "200" ]; then
+            echo "Échec de l'envoi (status $RESPONSE)"
+            exit 1
+          fi
+
+          echo "Newsletter envoyée avec succès ✓"
