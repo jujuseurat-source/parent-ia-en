@@ -3,10 +3,10 @@
 import { useState } from 'react'
 
 const AGE_GROUPS = [
-  { value: '3-5', label: '3 – 5 ans', emoji: '🐣' },
-  { value: '6-8', label: '6 – 8 ans', emoji: '🚀' },
-  { value: '9-11', label: '9 – 11 ans', emoji: '🔬' },
-  { value: '12+', label: '12 ans et +', emoji: '🤖' },
+  { value: '3-5', label: '3 – 5 yrs', emoji: '🐣' },
+  { value: '6-8', label: '6 – 8 yrs', emoji: '🚀' },
+  { value: '9-11', label: '9 – 11 yrs', emoji: '🔬' },
+  { value: '12+', label: '12 yrs +', emoji: '🤖' },
 ]
 
 export default function Newsletter() {
@@ -31,13 +31,13 @@ export default function Newsletter() {
 
       if (!res.ok) {
         const data = await res.json()
-        throw new Error(data.message || 'Erreur lors de l\'inscription')
+        throw new Error(data.message || 'Subscription failed')
       }
 
       setStatus('success')
     } catch (err: unknown) {
       setStatus('error')
-      setErrorMsg(err instanceof Error ? err.message : 'Une erreur est survenue')
+      setErrorMsg(err instanceof Error ? err.message : 'An error occurred')
     }
   }
 
@@ -46,10 +46,10 @@ export default function Newsletter() {
       <div className="bg-[#F5EFE0] border border-[#7A9E7A] rounded-2xl p-8 text-center">
         <div className="text-4xl mb-3">🎉</div>
         <h3 className="text-xl font-semibold text-[#3D3028] mb-2">
-          {"C'est parti !"}
+          {"You're in!"}
         </h3>
         <p className="text-[#8B7B6B]">
-          Tu recevras les prochains articles directement dans ta boîte mail.
+          Next articles will land directly in your inbox.
         </p>
       </div>
     )
@@ -59,18 +59,17 @@ export default function Newsletter() {
     <div className="bg-[#F5EFE0] border border-[#B5A898] rounded-2xl p-8">
       <div className="mb-6">
         <h3 className="text-xl font-semibold text-[#3D3028] mb-2">
-          Recevoir les prochains articles
+          Get the next articles
         </h3>
         <p className="text-[#8B7B6B] text-sm leading-relaxed">
-          {"Une activité testée, une vraie réaction d'enfant, aucun jargon. Directement dans ta boîte mail."}
+          {"A tested activity, a real kid's reaction, zero jargon. Straight to your inbox."}
         </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
-        {/* Sélection tranche d'âge */}
         <div>
           <p className="text-sm font-medium text-[#3D3028] mb-3">
-            Mon enfant a…
+            My child is…
           </p>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
             {AGE_GROUPS.map((group) => (
@@ -100,17 +99,16 @@ export default function Newsletter() {
           </div>
         </div>
 
-        {/* Email */}
         <div>
           <label htmlFor="newsletter-email" className="sr-only">
-            Adresse email
+            Email address
           </label>
           <input
             id="newsletter-email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="ton@email.fr"
+            placeholder="your@email.com"
             required
             className="
               w-full px-4 py-3 rounded-xl border-2 border-[#B5A898]
@@ -121,12 +119,10 @@ export default function Newsletter() {
           />
         </div>
 
-        {/* Erreur */}
         {status === 'error' && (
           <p className="text-red-600 text-sm">{errorMsg}</p>
         )}
 
-        {/* Bouton */}
         <button
           type="submit"
           disabled={!email || !ageGroup || status === 'loading'}
@@ -137,11 +133,11 @@ export default function Newsletter() {
             transition-colors duration-150
           "
         >
-          {status === 'loading' ? 'Inscription en cours…' : 'Je m\'inscris →'}
+          {status === 'loading' ? 'Subscribing…' : 'Subscribe →'}
         </button>
 
         <p className="text-xs text-[#B5A898] text-center">
-          Pas de spam. Désabonnement en un clic.
+          No spam. Unsubscribe in one click.
         </p>
       </form>
     </div>

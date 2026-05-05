@@ -1,7 +1,7 @@
 # CLAUDE.md — Contexte Parent IA pour les prochaines sessions
 
-**Mis à jour :** 29/04/2026  
-**Statut global :** MVP fonctionnel ✅ — Phase d'enrichissement et déploiement
+**Mis à jour :** 01/05/2026  
+**Statut global :** 🟢 BLOG FULLY EN LIGNE — parent-ia.fr et parent-ia.com actifs avec HTTPS, redirects, SEO complet et Google Search Console configurés
 
 ---
 
@@ -39,19 +39,39 @@
 
 ### Contenu & Système d'articles
 - [x] Frontmatter MDX standardisé : titre, date, age_cible, duree, materiel[], resume, retour_enfants, tags
-- [x] 1 article exemple complet : "le-tri-magique-classer-comme-une-ia.mdx"
+- [x] 6 articles écrits dans `content/articles/` (voir liste ci-dessous)
 - [x] Règles d'écriture clairement définies (ton Julien, anti-patterns IA, structure)
 - [x] `getAllArticles()` et `getArticleBySlug()` fonctionnels dans `lib/articles.ts`
 
+### Déploiement & Git (fait le 29/04/2026)
+- [x] Git installé sur la machine (v2.54.0)
+- [x] Repo GitHub créé : `github.com/jujuseurat-source/parent-ia`
+- [x] Blog déployé sur Vercel : **`parent-ia.vercel.app`** (en ligne ✅)
+- [x] Domaine `parent-ia.fr` ajouté dans Vercel + DNS OVH configurés ✅ VERT
+- [x] Domaine `parent-ia.com` ajouté dans Vercel + DNS OVH configurés ✅ VERT
+- [x] SSL généré automatiquement par Vercel sur les 4 domaines
+- [ ] `parent-ia.eu` → réservé pour version multilingue (plus tard)
+
 ---
 
-## ⚠️ Problèmes connus / TODO
+## ⚠️ Prochaines étapes (à faire)
 
-- [ ] **Tagline page d'accueil** : À vérifier/corriger (discussion en cours)
-- [ ] **Filtrage par tags** : `/blog` n'a pas de filtres (prévu pour plus tard)
-- [ ] **Déploiement Vercel** : Pas encore configuré
-- [ ] **Open Graph** : Métadonnées manquantes pour le partage social
+### Urgent
+- [x] ~~Propagation DNS~~ : `parent-ia.fr` et `parent-ia.com` sont verts ✅ (fait le 29/04)
+- [ ] **OVH renouvellement auto** : Activer pour `parent-ai.eu` (les deux autres sont déjà en automatique)
+
+### Court terme
+- [ ] **Annonce lancement** : LinkedIn, partage sur réseaux
+- [x] ~~Redirect parent-ia.com → parent-ia.fr~~ : Configuré en 308 Permanent Redirect ✅
+- [x] ~~Open Graph~~ : Metadata complète, OG, Twitter cards sur toutes les pages ✅
+- [x] ~~SEO~~ : sitemap.xml dynamique, robots.txt, JSON-LD sur articles, keywords ✅
+- [x] ~~llms.txt~~ : Fichier pour les moteurs IA (Perplexity, ChatGPT...) ✅
+- [x] ~~Google Search Console~~ : Validé, sitemap soumis, 9 pages découvertes ✅
+
+### Plus tard
+- [ ] **Filtrage par tags** : `/blog` n'a pas de filtres
 - [ ] **Page contact/newsletter** : Pas prévue dans le MVP
+- [ ] **parent-ai.eu** : Version multilingue du blog
 
 ---
 
@@ -60,10 +80,10 @@
 **RÈGLE ABSOLUE : avant d'écrire ou de relire un article, calculer l'âge exact des enfants à la date de l'article.**
 
 ### Dates de naissance
-| Enfant | Date de naissance | Âge au 1er mai 2026 | Classe 2025-2026 |
-|--------|-------------------|----------------------|------------------|
-| **Romane** | 30 novembre 2019 | 6 ans 5 mois | CP (fin d'année) |
-| **Meryl** | 10 juillet 2022 | 3 ans 9 mois | Petite Section (PS) de maternelle |
+| Enfant | Sexe | Date de naissance | Âge au 1er mai 2026 | Classe 2025-2026 |
+|--------|------|-------------------|----------------------|------------------|
+| **Romane** | Fille | 30 novembre 2019 | 6 ans 5 mois | CP (fin d'année) |
+| **Meryl** | Garçon | 10 juillet 2022 | 3 ans 9 mois | Petite Section (PS) de maternelle |
 
 ### Comment calculer l'âge à la date d'un article
 - Article daté du **2026-01-20** → Romane : 6 ans 1 mois / Meryl : 3 ans 6 mois
@@ -226,15 +246,45 @@ npm start
 
 ## 📊 État actuel (snapshots)
 
-**Articles écrits :** 1 (le-tri-magique)  
-**Articles en brouillon :** 0  
-**Concepts explorés :** Classification/catégorisation  
-**Enfants testés :** Romane (6 ans, CP) et Meryl (3 ans, PS maternelle)  
+**Blog en ligne :** `parent-ia.fr` ✅  
+**GitHub :** `github.com/jujuseurat-source/parent-ia`
 
-**Prochains articles suggérés :**
-- Mémoire / apprentissage
-- Langage naturel / compréhension
-- Reconnaissance visuelle / patterns
-- Prédiction et algorithmes
-- Créativité & génération
+**Articles dans `content/articles/` :**
+- `le-tri-magique-classer-comme-une-ia.mdx` — Classification
+- `le-cahier-secret.mdx`
+- `le-dessin-rate.mdx`
+- `le-jeu-du-souvenir-menteur.mdx`
+- `le-mot-qui-compte.mdx`
+- `les-photos-de-mamie.mdx`
 
+**18 articles en brouillon** dans `C:\Users\julie\Desktop\Parent IA\02-CONTENU\articles-a-venir\` (mai → décembre 2026)
+
+**Concepts explorés :** Classification, mémoire, patterns, langage  
+**Enfants testés :** Romane (6 ans, CP) et Meryl (3 ans, PS maternelle)
+
+---
+
+## 🔍 SEO & Indexation (fait le 29/04/2026)
+
+- **Metadata** : title, description, keywords, auteur sur toutes les pages
+- **Open Graph** : preview LinkedIn/Twitter sur chaque page et article
+- **JSON-LD** : données structurées sur chaque article (schema.org Article)
+- **sitemap.xml** : dynamique, se met à jour auto à chaque nouvel article
+- **robots.txt** : autorise tous les crawlers
+- **llms.txt** : guide pour les IA crawlers
+- **Google Search Console** : validé, sitemap soumis, 9 pages découvertes
+
+---
+
+## 🔧 Infos techniques utiles
+
+**Pour publier un nouvel article :**
+1. Copier le `.mdx` depuis `C:\Users\julie\Desktop\Parent IA\02-CONTENU\articles-a-venir\`
+2. Le coller dans `content/articles/`
+3. `git add .` → `git commit -m "Ajout article X"` → `git push`
+4. Vercel redéploie automatiquement en 1-2 minutes
+
+**Comptes :**
+- GitHub : `jujuseurat-source`
+- Vercel : `jujuseurat-8580` (jujuseurat@gmail.com)
+- OVH : connecté via jujuseurat@gmail.com (dou
