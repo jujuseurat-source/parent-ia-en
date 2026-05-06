@@ -18,10 +18,10 @@ export const metadata: Metadata = {
 
 const AUDIO = {
   julien: {
-    src: '/audio/a-propos/julien-pourquoi-ce-blog.mp3',
+    src: '/audio/a-propos/julien-why-this-blog.mp3',
     label: 'Julien, the dad',
     description: 'Why I created this blog',
-    enabled: false,
+    enabled: true,
   },
   romane: {
     src: '/audio/a-propos/romane-cia-pour-toi.mp3',
