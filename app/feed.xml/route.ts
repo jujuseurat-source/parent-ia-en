@@ -1,6 +1,6 @@
 import { getAllArticles } from '@/lib/articles'
 
-const SITE_URL = 'https://www.parent-ia.fr'
+const SITE_URL = 'https://www.parent-ai.eu'
 
 export async function GET() {
   const articles = getAllArticles()
@@ -33,14 +33,14 @@ export async function GET() {
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Parent IA — Grandir avec l'IA</title>
+    <title>Parent AI — Growing Up with AI</title>
     <link>${SITE_URL}</link>
-    <description>Activités concrètes pour apprendre l'IA à ses enfants, sans écran et sans jargon.</description>
-    <language>fr-FR</language>
+    <description>Hands-on activities to teach AI to kids, screen-free and jargon-free.</description>
+    <language>en-US</language>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>${SITE_URL}/og-image.png</url>
-      <title>Parent IA</title>
+      <title>Parent AI</title>
       <link>${SITE_URL}</link>
     </image>
     ${items}

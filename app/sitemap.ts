@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles()
-  const baseUrl = 'https://www.parent-ia.eu'
+  const baseUrl = 'https://www.parent-ai.eu'
 
   const articleUrls = articles.map(article => ({
     url: `${baseUrl}/blog/${article.slug}`,

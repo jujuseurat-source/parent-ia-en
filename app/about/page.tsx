@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'About',
   description: 'My name is Julien. Romane is 6, Meryl is 3. This blog is about how I try to explain AI to them with paper, games, and plenty of failures.',
   alternates: {
-    canonical: 'https://www.parent-ia.eu/about',
+    canonical: 'https://www.parent-ai.eu/about',
   },
   openGraph: {
     title: 'About | Parent AI',
     description: 'My name is Julien. Romane is 6, Meryl is 3. This blog is about how I try to explain AI to them with paper, games, and plenty of failures.',
-    url: 'https://www.parent-ia.eu/about',
+    url: 'https://www.parent-ai.eu/about',
     type: 'website',
   },
 }

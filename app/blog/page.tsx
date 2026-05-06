@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: 'Blog',
   description: 'All the activities tested with my family to teach artificial intelligence to kids: classification, memory, patterns, language.',
   alternates: {
-    canonical: 'https://www.parent-ia.eu/blog',
+    canonical: 'https://www.parent-ai.eu/blog',
   },
   openGraph: {
     title: 'Blog | Parent AI',
     description: 'All the activities tested with my family to teach AI to kids in a playful, screen-free way.',
-    url: 'https://www.parent-ia.eu/blog',
+    url: 'https://www.parent-ai.eu/blog',
     type: 'website',
   },
 }

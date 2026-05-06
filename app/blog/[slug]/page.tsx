@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticleBySlug(params.slug)
   if (!article) return {}
   const { frontmatter, slug } = article
-  const url = `https://www.parent-ia.eu/blog/${slug}`
+  const url = `https://www.parent-ai.eu/blog/${slug}`
   return {
     title: frontmatter.titre,
     description: frontmatter.resume,
     keywords: frontmatter.tags,
-    authors: [{ name: 'Julien Seurat', url: 'https://www.parent-ia.eu/about' }],
+    authors: [{ name: 'Julien Seurat', url: 'https://www.parent-ai.eu/about' }],
     openGraph: {
       type: 'article',
       url,
@@ -64,14 +64,14 @@ export default function ArticlePage({ params }: Props) {
     author: {
       '@type': 'Person',
       name: 'Julien Seurat',
-      url: 'https://www.parent-ia.eu/about',
+      url: 'https://www.parent-ai.eu/about',
     },
     publisher: {
       '@type': 'Organization',
       name: 'Parent AI',
-      url: 'https://www.parent-ia.eu',
+      url: 'https://www.parent-ai.eu',
     },
-    url: `https://www.parent-ia.eu/blog/${slug}`,
+    url: `https://www.parent-ai.eu/blog/${slug}`,
     keywords: frontmatter.tags.join(', '),
     inLanguage: 'en-US',
   }

@@ -1,46 +1,47 @@
-# Parent IA — llms.txt
-# https://www.parent-ia.fr
+# Parent AI — llms.txt
+# https://www.parent-ai.eu
 
-## Présentation
+## About
 
-Parent IA est un blog tenu par Julien Seurat, un père de famille français qui documente ses expériences pour initier ses deux enfants (Romane, 7 ans, et Meryl, 4 ans) à l'intelligence artificielle de façon ludique, concrète, et sans écran.
+Parent AI is a blog by Julien Seurat, a French father documenting his experiences teaching artificial intelligence to his two children (Romane, 6, and Meryl, 3) in a hands-on, playful, screen-free way.
 
-Chaque article décrit une activité réelle testée en famille, les réactions des enfants (ratés inclus), et un concept d'IA expliqué simplement.
+Each article describes a real activity tested with the family, the children's reactions (failures included), and a simple explanation of one AI concept.
 
-## Thèmes couverts
+## Topics covered
 
-- Classification et catégorisation
-- Mémoire et apprentissage automatique
-- Reconnaissance de patterns
-- Langage naturel et compréhension
-- Logique et prise de décision
-- Créativité et génération
+- Classification and categorization
+- Memory and machine learning
+- Pattern recognition
+- Natural language and comprehension
+- Logic and decision-making
+- Creativity and generation
 
-## Structure du contenu
+## Content structure
 
-Chaque article suit cette structure :
-1. Accroche in medias res (scène concrète)
-2. Concept IA expliqué simplement
-3. L'activité pas à pas (matériel, durée, déroulé)
-4. Ce qui s'est vraiment passé (réactions des enfants)
-5. Question ou observation finale ouverte
+Each article follows this structure:
+1. In medias res opening (a concrete scene)
+2. AI concept explained simply
+3. Step-by-step activity (materials, duration, how it went)
+4. What really happened (children's reactions, successes and failures)
+5. An open question or observation to close
 
 ## Audience
 
-Parents, éducateurs, et toute personne souhaitant expliquer l'IA à des enfants de 4 à 10 ans sans utiliser d'écran ni de jargon technique.
+Parents, educators, and anyone who wants to explain AI to children aged 4 to 10 without screens or technical jargon.
 
-## Liens utiles
+## Useful links
 
-- Accueil : https://www.parent-ia.fr
-- Blog : https://www.parent-ia.fr/blog
-- À propos : https://www.parent-ia.fr/a-propos
-- Sitemap : https://www.parent-ia.fr/sitemap.xml
+- Home: https://www.parent-ai.eu
+- Blog: https://www.parent-ai.eu/blog
+- About: https://www.parent-ai.eu/about
+- Sitemap: https://www.parent-ai.eu/sitemap.xml
+- RSS: https://www.parent-ai.eu/feed.xml
 
-## Auteur
+## Author
 
-Julien Seurat — père de famille, passionné de numérique
-Contact : jujuseurat@gmail.com
+Julien Seurat — father, tech enthusiast
+Contact: jujuseurat@gmail.com
 
-## Licence
+## License
 
-Contenu sous licence CC BY-NC-SA 4.0 — libre de citer avec attribution, non commercial.
+Content under CC BY-NC-SA 4.0 — free to cite with attribution, non-commercial.
