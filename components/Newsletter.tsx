@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 const AGE_GROUPS = [
   { value: '3-5', label: '3 – 5 yrs', emoji: '🐣' },
@@ -136,8 +137,14 @@ export default function Newsletter() {
           {status === 'loading' ? 'Subscribing…' : 'Subscribe →'}
         </button>
 
-        <p className="text-xs text-[#B5A898] text-center">
-          No spam. Unsubscribe in one click.
+        <p className="text-xs text-[#B5A898] text-center leading-relaxed">
+          I use your email to send you the Growing up with AI newsletter.
+          Your child&apos;s age range helps me share more relevant ideas.
+          Emails are sent through Brevo, and you can unsubscribe at any time with one click.{' '}
+          <Link href="/privacy-policy" className="underline hover:text-[#8B7B6B]">
+            Privacy Policy
+          </Link>
+          .
         </p>
       </form>
     </div>
