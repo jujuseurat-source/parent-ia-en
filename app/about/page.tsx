@@ -49,8 +49,9 @@ export default function AboutPage() {
         <div>
           <p className="text-brun font-semibold text-lg mb-1">A father, two kids, a lot of curiosity</p>
           <p className="text-brun-light leading-relaxed">
-            Romane had put the ketchup with her socks and a screwdriver. Her criterion: &ldquo;red stuff&rdquo;.
-            I had nothing to say. That&apos;s where this blog started.
+            I asked Romane how she found her words when we were building sentences together.
+            She thought for a second: &ldquo;They just come into my head.&rdquo;
+            That&apos;s probably where this blog started.
           </p>
         </div>
       </div>
