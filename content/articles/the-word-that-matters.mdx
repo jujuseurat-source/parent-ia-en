@@ -6,9 +6,10 @@ duree: "35 minutes"
 materiel:
   - "Sheets of paper"
   - "Different colored markers"
-  - "Short sentences written in advance on paper strips"
-resume: "We played at underlining the important words in sentences. Romane and I didn't underline the same ones. And that's exactly the problem AI tries to solve."
-retour_enfants: "Romane was underlining words she found beautiful. She eventually figured out the 'glue words.' Meryl wanted to underline in red. He underlined every single word in red."
+  - "Sentences written in advance"
+image: "/images/articles/the-word-that-matters.jpg"
+resume: "We played at crossing out the unimportant words in sentences. Romane got the idea quickly. Until the sentence she refused to touch."
+retour_enfants: "Romane came up with 'glue words': the ones without which the sentence falls apart. She refused to cross out anything in 'when I grow up, I want to be a dance teacher.' I crossed out 'when I grow up' to show her it still worked. She wasn't convinced."
 tags:
   - "attention"
   - "comprehension"
@@ -16,58 +17,72 @@ tags:
   - "screen-free"
 ---
 
-I'd written *"The cat eats the mouse"* on a strip of paper.
+*"The rabbit eats a..."*
 
-Romane underlined "cat." Because it's her favorite animal and the word felt most important to her.
+Romane said carrot without thinking.
 
-I would have underlined "eats." Because that's the action, it's the word that explains what's happening between the cat and the mouse.
+I asked why. She shrugged. *"Rabbits eat carrots."*
 
-We hadn't underlined the same thing. And we both had a reason.
+That's exactly why an AI would give the same answer. Not because it knows rabbits. Because it's read millions of sentences where "the rabbit eats a" ends with "carrot." It learned what comes next, not what's true.
 
-## What AI does with a sentence
+That wasn't the activity yet.
 
-When an AI reads a sentence, it doesn't read the words one by one in order, the way you read a book. It tries to figure out which words are important for understanding the others.
+## What AI does with words
 
-In "The cat eats the mouse," the word "eats" changes everything. Remove it, and the relationship between the cat and the mouse disappears. The AI learns to spot these pivot words. It pays more attention to them than to the others.
+When an AI reads a sentence, it doesn't read the words in order and stop there. It tries to figure out which ones matter most to the others.
 
-This mechanism is called attention. It's one of the central ideas behind modern AI. Each word looks at all the other words in the sentence and decides how much they matter to it.
+In *"the dog eats Romane's cake"*, the word "eats" explains everything else. Without it, the dog and the cake have no connection. Modern AI learns to spot these words and pays them more attention than the rest.
+
+This mechanism is called attention. It's one of the central ideas behind large language models.
 
 ## The activity
 
-Prepare short, concrete sentences on paper strips, phrases a 6-year-old can read, with familiar words: *"The dog eats Romane's cake"*, *"The witch lost her red wand"*, *"Meryl hid the cat under the bed"*.
+I'd prepared sentences on sheets of paper: simple ones (*"the rabbit eats a carrot"*, *"the witch lost her red wand"*) and more personal ones (*"Meryl hid his comfort toy under his bed"*, *"Uncle Yann is much taller than Dad"*, *"when I grow up, I want to be a dance teacher"*).
 
-Each player gets a different colored marker.
+Instructions: cross out the words that aren't the most important. Then test it: if you read the sentence without the crossed-out word, does it still mean something?
 
-Instructions: underline the most important words in each sentence. Without explaining why, at first.
+<Image
+  src="/images/articles/the-word-that-matters.jpg"
+  alt="The sheets of sentences prepared for the activity"
+  width={800}
+  height={600}
+  className="rounded-xl mx-auto my-6 shadow-md"
+/>
 
-When everyone has underlined, compare. Do the same words come up? Who underlined what? Why?
-
-Second round: for each disagreement, test it. Remove the underlined word from the sentence and read it out loud. Do you still understand what's happening?
-
-That's the missing-word test. If the sentence falls apart without it, it's an important word.
+<p className="text-center text-sm text-brun-lighter italic -mt-4 mb-6">The starting sentences. Some simple, some from real life.</p>
 
 ## What actually happened
 
-Romane was underlining words she found beautiful or liked. "Cake" kept coming up. "Wand" too.
+Romane started with *"the witch lost her red wand."* She crossed out "red." We read it back: *"the witch lost her wand."* She nodded. It worked.
 
-When I underlined "eats" in the first sentence and she objected, I cut the word out loud: *"The dog Romane's cake."* She thought about it. *"Oh. You can't tell what's happening anymore."*
+*"Uncle Yann is much taller than Dad."* She crossed out "Yann." Result: *"Uncle is much taller than Dad."* I showed her we could also drop "much": *"Uncle is taller than Dad."* Still standing.
 
-We did that for each disagreement. Remove the word, hear what was left.
+*"Grandma loves cycling around town."* She crossed out "around town." We read it back. It held.
 
-The rule emerged slowly. Important words are the ones without which the sentence doesn't hold together. Romane put it this way: *"They're the glue words."*
+She ended up naming the rule: the words that stay are the ones without which the sentence collapses. She called them glue words.
 
-I told her that the researchers who invented the attention mechanism in AI had spent years trying to formalize exactly that intuition.
+<Image
+  src="/images/articles/the-word-that-matters-2.jpg"
+  alt="The sentences with Romane's crossed-out words"
+  width={800}
+  height={600}
+  className="rounded-xl mx-auto my-6 shadow-md"
+/>
 
-She shrugged. *"They could've just asked a kid."*
+<p className="text-center text-sm text-brun-lighter italic -mt-4 mb-6">After Romane. The crossed-out words are hers.</p>
 
-Meryl wanted to join in. I'd given him a red marker. He underlined every single word in every single sentence, pressing very hard. When I asked why, he said: *"Because red is beautiful."*
+Then: *"When I grow up, I want to be a dance teacher."*
 
-Not the same activity as Romane's. But he'd made his decision and was entirely consistent with it.
+Romane put down her marker. *"You can't take anything out."*
+
+I crossed out *"when I grow up"* to show her that *"I want to be a dance teacher"* still meant something.
+
+She wasn't convinced. For her, crossing out *"when I grow up"* meant removing something beyond the sentence.
 
 ## To finish
 
-The paper strips stayed on the table. That evening, Romane took one and tried to build a sentence where every word was equally important.
+I told her that the researchers who invented the attention mechanism in AI had spent years on this same question: which word matters to which other word.
 
-She couldn't do it.
+Romane shrugged.
 
-Is a sentence where every word matters equally still a sentence?
+AI can spot the glue words in a sentence about a rabbit. But *"when I grow up"* might not be a word you take out.
