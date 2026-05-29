@@ -4,13 +4,13 @@ import AudioPlayer from '@/components/AudioPlayer'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'My name is Julien. Romane is 6, Meryl is 3. This blog is about how I try to explain AI to them with paper, games, and plenty of failures.',
+  description: 'My name is Julien. Romane is 6, Meryl is 3. This blog is about how I try to teach them AI through play, no screens, and plenty of failures.',
   alternates: {
     canonical: 'https://www.parent-ai.eu/about',
   },
   openGraph: {
     title: 'About | Parent AI',
-    description: 'My name is Julien. Romane is 6, Meryl is 3. This blog is about how I try to explain AI to them with paper, games, and plenty of failures.',
+    description: 'My name is Julien. Romane is 6, Meryl is 3. This blog is about how I try to teach them AI through play, no screens, and plenty of failures.',
     url: 'https://www.parent-ai.eu/about',
     type: 'website',
   },
@@ -49,9 +49,9 @@ export default function AboutPage() {
         <div>
           <p className="text-brun font-semibold text-lg mb-1">A father, two kids, a lot of curiosity</p>
           <p className="text-brun-light leading-relaxed">
-            I asked Romane how she found her words when we were building sentences together.
-            She thought for a second: &ldquo;They just come into my head.&rdquo;
-            That&apos;s probably where this blog started.
+            Romane asked me if AI dreams. I didn&apos;t know what to say.
+            Not because the question is hard. Because I didn&apos;t have the right words.
+            That&apos;s where all of this started.
           </p>
         </div>
       </div>
@@ -59,20 +59,22 @@ export default function AboutPage() {
       <div className="space-y-6 text-brun-light leading-relaxed">
         <p>
           My name is Julien. Romane is 6, Meryl is 3. I work in tech.
-          One evening at dinner, Romane asked what &ldquo;this AI everyone talks about&rdquo; actually was.
-          I searched for the right words. Nothing good came out.
+          One evening, we took Ary out of its box — a connected plush toy with built-in AI.
+          They shouted at it, flipped it in every direction, asked two contradictory questions
+          in the same sentence. An hour of complete chaos.
         </p>
 
         <p>
-          I could have shown her ChatGPT. But I wanted something else: for her to understand
-          the logic before the tool. Decision-making, sorting, pattern recognition.
-          With her hands, not a screen.
+          What I understood that evening: their brains were recording something, even without
+          understanding it. The quality of the answer depends on the quality of the question.
+          They didn&apos;t know that yet. But they were in the process of discovering it.
         </p>
 
         <p>
-          So we started inventing games. Paper, dice, objects from the living room.
-          Meryl mostly participated by knocking things over. And something happened:
-          it worked. Not always as planned. But it worked.
+          I could have explained it. But at 3 and 6, a talk about AI lasts thirty seconds
+          before we&apos;re talking about something else. So we started inventing games instead.
+          Paper, dice, objects from the living room. Meryl mostly participated by knocking things over.
+          And something happened: it worked. Not always as planned. But it worked.
         </p>
 
         <p>
@@ -95,9 +97,9 @@ export default function AboutPage() {
 
       {anyAudioEnabled && (
         <div className="mt-10">
-          <h2 className="text-xl font-bold text-brun mb-2">In their own words</h2>
+          <h2 className="text-xl font-bold text-brun mb-2">In his own words</h2>
           <p className="text-brun-light text-sm mb-5">
-            Because some things feel better than they explain.
+            Julien in a few minutes.
           </p>
           <div className="space-y-3">
             {AUDIO.julien.enabled && (
