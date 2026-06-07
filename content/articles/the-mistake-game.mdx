@@ -28,9 +28,9 @@ An AI doesn't learn the way you study a lesson. It learns by missing, getting co
 
 At the start, it knows nothing. If you ask it to recognise a cat in a photo, it answers at random. Then you tell it whether it was right or wrong. It tweaks, very slightly, the way it looks at images. You try again. It misses again. You correct it again. It adjusts again.
 
-This process is called training by backpropagation, but the idea is simple: every mistake contains information about how to improve. The error isn't the problem. It's the raw material for learning.
+It's called backpropagation. The idea: every mistake says something about how to improve. Missing isn't the problem. It's the engine.
 
-What's striking is the number of tries. A child learns to aim in a few dozen attempts. An AI might need millions of examples to learn to recognise a cat. What's fast for humans is slow for machines, and the other way around.
+The thing that changes everything is the number of tries. A child learns to aim in a few dozen throws. An AI might need millions of examples to recognise a cat. What takes us an hour can take it weeks of computing.
 
 ## The activity
 
@@ -44,7 +44,7 @@ Note how many attempts it takes to hit the target, or measure the distance to th
 
 Halfway through, ask the question: *"What do you change each time? How do you know what to change?"*
 
-Most children answer intuitively: I threw too hard, too far left, aimed too high. Those are pieces of information about the error. And that's exactly what you give an AI when you correct it.
+Most answer without thinking: too hard, too far left, aimed too high. That's exactly what you give an AI when you correct it.
 
 Second round: blindfolded. Throw without looking where the objects land. No feedback at all. The number of attempts before hitting the target explodes. Or you never hit it.
 
@@ -52,7 +52,7 @@ That's an AI no longer being told whether it's right or wrong. It keeps answerin
 
 ## What actually happened
 
-Romane had a strategy. She threw softly on the first go to get a reference point, then adjusted progressively. She said it was *"like learning to ride a bike but longer"*, which struck me as a pretty good description of gradient descent.
+Romane had a strategy. She threw softly on the first go to get a reference point, then adjusted progressively. She said it was *"like learning to ride a bike but longer"*, which is actually a decent description of gradient descent.
 
 The blindfolded round frustrated her. She thought it was unfair. *"If I can't see where I'm missing, I can't get better."* Exactly.
 
