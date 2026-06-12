@@ -6,7 +6,11 @@ import type { Metadata } from 'next'
 import AudioPlayer from '@/components/AudioPlayer'
 import Image from 'next/image'
 
-const mdxComponents = { AudioPlayer, Image }
+// Wrappers: avoids the "Cannot access propTypes on the server" error in dev mode
+const mdxComponents = {
+  AudioPlayer: (props: React.ComponentProps<typeof AudioPlayer>) => <AudioPlayer {...props} />,
+  Image: (props: React.ComponentProps<typeof Image>) => <Image {...props} />,
+}
 
 interface Props {
   params: { slug: string }
@@ -148,7 +152,9 @@ export default function ArticlePage({ params }: Props) {
         prose-blockquote:border-l-4 prose-blockquote:border-sauge prose-blockquote:bg-sauge-100 prose-blockquote:rounded-r-xl prose-blockquote:py-1 prose-blockquote:not-italic
         prose-blockquote:text-brun-light
       ">
-        <MDXRemote source={content} components={mdxComponents} />
+        {/* blockJS: false — our own trusted content; without it, next-mdx-remote v6
+            strips attributes like width={800} from MDX images */}
+        <MDXRemote source={content} components={mdxComponents} options={{ blockJS: false }} />
       </article>
 
       <div className="mt-10 bg-terracotta-100 rounded-2xl p-6 border-l-4 border-terracotta">
