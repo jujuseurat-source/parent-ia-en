@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import '@fontsource-variable/fraunces'
+import '@fontsource-variable/fraunces/wght-italic.css'
 import './globals.css'
 
 const geistSans = localFont({

@@ -20,9 +20,9 @@ export default function BlogPage() {
   const articles = getAllArticles()
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
-      <div className="mb-10">
-        <h1 className="text-3xl font-bold text-brun mb-3">The blog</h1>
+    <div className="max-w-5xl mx-auto px-4 py-12">
+      <div className="mb-10 max-w-2xl">
+        <h1 className="font-serif text-4xl font-semibold text-brun mb-3">The activities</h1>
         <p className="text-brun-light text-lg leading-relaxed">
           All our AI adventures: concrete activities tested as a family,
           with what worked, what didn&apos;t, and what we learned from it.

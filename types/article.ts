@@ -8,6 +8,7 @@ export interface ArticleFrontmatter {
   retour_enfants: string
   tags: string[]
   slug?: string
+  image?: string
 }
 
 export interface Article {

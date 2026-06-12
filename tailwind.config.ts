@@ -9,11 +9,17 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        serif: ['"Fraunces Variable"', 'Georgia', 'serif'],
+      },
       colors: {
+        paper: '#FBF8F0',
         beige: {
           50:  '#FDFAF5',
           100: '#FAF5EC',
           200: '#F2E8D5',
+          300: '#E3D7BD',
           DEFAULT: '#F5EFE0',
         },
         sauge: {

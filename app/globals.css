@@ -4,11 +4,11 @@
 
 @layer base {
   body {
-    @apply bg-beige-50 text-brun;
+    @apply bg-beige-50 text-brun antialiased;
   }
 
   h1, h2, h3, h4 {
-    @apply text-brun;
+    @apply text-brun font-serif;
   }
 }
 
@@ -19,11 +19,11 @@
 
   .prose-parent {
     @apply prose max-w-none;
-    @apply prose-headings:text-brun prose-headings:font-bold;
+    @apply prose-headings:text-brun prose-headings:font-serif prose-headings:font-semibold;
     @apply prose-p:text-brun-light prose-p:leading-relaxed;
     @apply prose-a:text-terracotta prose-a:no-underline hover:prose-a:underline;
     @apply prose-strong:text-brun;
     @apply prose-li:text-brun-light;
-    @apply prose-blockquote:border-l-sauge prose-blockquote:text-brun-light;
+    @apply prose-blockquote:border-l-sauge prose-blockquote:text-brun-light prose-blockquote:font-serif prose-blockquote:italic;
   }
 }

@@ -4,10 +4,10 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 const AGE_GROUPS = [
-  { value: '3-5', label: '3 – 5 yrs', emoji: '🐣' },
-  { value: '6-8', label: '6 – 8 yrs', emoji: '🚀' },
-  { value: '9-11', label: '9 – 11 yrs', emoji: '🔬' },
-  { value: '12+', label: '12 yrs +', emoji: '🤖' },
+  { value: '3-5', label: '3 – 5 yrs' },
+  { value: '6-8', label: '6 – 8 yrs' },
+  { value: '9-11', label: '9 – 11 yrs' },
+  { value: '12+', label: '12 yrs +' },
 ]
 
 export default function Newsletter() {
@@ -44,12 +44,11 @@ export default function Newsletter() {
 
   if (status === 'success') {
     return (
-      <div className="bg-[#F5EFE0] border border-[#7A9E7A] rounded-2xl p-8 text-center">
-        <div className="text-4xl mb-3">🎉</div>
-        <h3 className="text-xl font-semibold text-[#3D3028] mb-2">
+      <div className="bg-brun rounded-3xl p-10 sm:p-14 text-center">
+        <h3 className="font-serif text-2xl font-semibold text-beige mb-2">
           {"You're in!"}
         </h3>
-        <p className="text-[#8B7B6B]">
+        <p className="text-brun-lighter">
           Next articles will land directly in your inbox.
         </p>
       </div>
@@ -57,19 +56,23 @@ export default function Newsletter() {
   }
 
   return (
-    <div className="bg-[#F5EFE0] border border-[#B5A898] rounded-2xl p-8">
-      <div className="mb-6">
-        <h3 className="text-xl font-semibold text-[#3D3028] mb-2">
-          Get the next articles
+    <div className="bg-brun rounded-3xl p-8 sm:p-12 grid grid-cols-1 md:grid-cols-[1.1fr,0.9fr] gap-10 items-center">
+      {/* Pitch */}
+      <div>
+        <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-beige mb-3 leading-snug">
+          One activity a month, straight to your inbox
         </h3>
-        <p className="text-[#8B7B6B] text-sm leading-relaxed">
-          {"A tested activity, a real kid's reaction, zero jargon. Straight to your inbox."}
+        <p className="text-brun-lighter leading-relaxed">
+          A tested activity, a real kid&apos;s reaction, zero jargon.
+          Tailored to your child&apos;s age.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Form */}
+      <form onSubmit={handleSubmit} className="bg-beige-50/5 border border-beige-50/15 rounded-2xl p-6 space-y-4">
+        {/* Age range */}
         <div>
-          <p className="text-sm font-medium text-[#3D3028] mb-3">
+          <p className="text-sm font-semibold text-brun-lighter mb-2.5">
             My child is…
           </p>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -77,11 +80,11 @@ export default function Newsletter() {
               <label
                 key={group.value}
                 className={`
-                  flex flex-col items-center gap-1 p-3 rounded-xl border-2 cursor-pointer
-                  transition-all duration-150 text-center
+                  flex items-center justify-center p-2.5 rounded-xl border-2 cursor-pointer
+                  transition-all duration-150 text-center text-xs font-semibold leading-tight
                   ${ageGroup === group.value
-                    ? 'border-[#B86A3E] bg-[#B86A3E]/10 text-[#B86A3E]'
-                    : 'border-[#B5A898] bg-white text-[#8B7B6B] hover:border-[#B86A3E]/50'
+                    ? 'border-terracotta bg-terracotta text-white'
+                    : 'border-beige-50/25 text-beige hover:border-terracotta/70'
                   }
                 `}
               >
@@ -93,13 +96,13 @@ export default function Newsletter() {
                   onChange={() => setAgeGroup(group.value)}
                   className="sr-only"
                 />
-                <span className="text-2xl">{group.emoji}</span>
-                <span className="text-xs font-medium leading-tight">{group.label}</span>
+                {group.label}
               </label>
             ))}
           </div>
         </div>
 
+        {/* Email */}
         <div>
           <label htmlFor="newsletter-email" className="sr-only">
             Email address
@@ -112,24 +115,26 @@ export default function Newsletter() {
             placeholder="your@email.com"
             required
             className="
-              w-full px-4 py-3 rounded-xl border-2 border-[#B5A898]
-              bg-white text-[#3D3028] placeholder-[#B5A898]
-              focus:outline-none focus:border-[#B86A3E]
+              w-full px-4 py-3 rounded-xl border-2 border-beige-50/20
+              bg-beige-50/10 text-beige placeholder-brun-lighter
+              focus:outline-none focus:border-terracotta
               transition-colors duration-150
             "
           />
         </div>
 
+        {/* Error */}
         {status === 'error' && (
-          <p className="text-red-600 text-sm">{errorMsg}</p>
+          <p className="text-red-300 text-sm">{errorMsg}</p>
         )}
 
+        {/* Button */}
         <button
           type="submit"
           disabled={!email || !ageGroup || status === 'loading'}
           className="
-            w-full py-3 px-6 rounded-xl font-semibold text-white
-            bg-[#B86A3E] hover:bg-[#a05a30]
+            w-full py-3 px-6 rounded-full font-semibold text-white
+            bg-terracotta hover:bg-terracotta-500
             disabled:opacity-50 disabled:cursor-not-allowed
             transition-colors duration-150
           "
@@ -137,11 +142,11 @@ export default function Newsletter() {
           {status === 'loading' ? 'Subscribing…' : 'Subscribe →'}
         </button>
 
-        <p className="text-xs text-[#B5A898] text-center leading-relaxed">
+        <p className="text-xs text-brun-lighter text-center leading-relaxed">
           I use your email to send you the Growing up with AI newsletter.
           Your child&apos;s age range helps me share more relevant ideas.
           Emails are sent through Brevo, and you can unsubscribe at any time with one click.{' '}
-          <Link href="/privacy-policy" className="underline hover:text-[#8B7B6B]">
+          <Link href="/privacy-policy" className="underline hover:text-beige">
             Privacy Policy
           </Link>
           .

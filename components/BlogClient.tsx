@@ -36,7 +36,7 @@ export default function BlogClient({ articles }: BlogClientProps) {
               : 'bg-white border border-beige-200 text-brun-light hover:border-terracotta hover:text-terracotta'
           }`}
         >
-          Tous
+          All
         </button>
         {allTags.map(tag => (
           <button
@@ -56,9 +56,9 @@ export default function BlogClient({ articles }: BlogClientProps) {
 
       {/* Articles filtrés */}
       {filtered.length === 0 ? (
-        <p className="text-brun-light text-center py-10">Aucun article pour ce tag pour l&apos;instant.</p>
+        <p className="text-brun-light text-center py-10">No article for this tag yet.</p>
       ) : (
-        <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map(article => (
             <ArticleCard
               key={article.slug}
